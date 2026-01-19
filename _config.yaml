@@ -2,7 +2,7 @@
 # Website Basic Configuration
 
 # 网站标题 - 浏览器标签页显示的标题
-title: Fish Archive
+title: Mosen Archive
 
 # 网站描述 - 用于搜索引擎优化和社交媒体分享
 description: A personal homepage in Blue Archive style.
@@ -11,10 +11,10 @@ description: A personal homepage in Blue Archive style.
 favicon: /favicon144.png
 
 # 网站作者姓名
-author: Yuzifu
+author: Mosen
 
 # 网站关键词 - 用于搜索引擎优化，逗号分隔
-keywords: 'Blue Archive, 小鱼yuzifu, Personal Homepage'
+keywords: 'Blue Archive, 陌森mosen, Personal Homepage'
 
 # ICP备案号 - 中国网站备案信息，留空表示未备案
 ICP: ''
@@ -22,10 +22,10 @@ ICP: ''
 # PWA配置 - 渐进式Web应用配置
 manifest:
   # PWA应用完整名称
-  name: Fish Archive
+  name: Mosen Archive
   
   # PWA应用简短名称 - 用于桌面显示
-  short_name: Fish Archive
+  short_name: Mosen Archive
   
   # PWA应用描述
   description: A personal homepage in Blue Archive style.
@@ -94,7 +94,7 @@ contact:
   
   # 联系方式2
   - name: Gitee Profile
-    href: 'https://gitee.com/sf-yuzifu'
+    href: 'https://gitee.com/mosen0227'
     iconfont: icon-gitee
   
   # 联系方式3
