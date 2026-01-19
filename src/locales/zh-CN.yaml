@@ -2,27 +2,27 @@
 # Chinese Translation File
 
 # 网站标题 - 浏览器标签页显示的标题
-title: 小鱼档案
+title: 词柔档案
 
 # 网站描述 - 用于搜索引擎优化和社交媒体分享
 description: 有关小鱼的《蔚蓝档案》风格的个人主页
 
 # 网站关键词 - 用于搜索引擎优化，逗号分隔
-keywords: '蔚蓝档案,小鱼yuzifu,个人主页'
+keywords: '蔚蓝档案,词柔,个人主页'
 
 # PWA应用名称配置
 manifest:
   # PWA应用完整名称
-  name: 小鱼档案
+  name: 词柔档案
 
   # PWA应用简短名称 - 用于桌面显示
-  short_name: 小鱼档案
+  short_name: 词柔档案
 
   # PWA应用描述
   description: 有关小鱼的《蔚蓝档案》风格的个人主页
 
 # 网站作者显示名称
-author: 小鱼yuzifu
+author: 词柔
 
 # 底部项目展示区域 - 项目名称翻译
 dock:
