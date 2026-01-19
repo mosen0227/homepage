@@ -1,0 +1,86 @@
+# English Translation File
+
+# Website title - Displayed in browser tab
+title: Fish Archive
+
+# Website description - Used for SEO and social media sharing
+description: A personal homepage in Blue Archive style.
+
+# Website keywords - Used for SEO, comma-separated
+keywords: 'Blue Archive, yuzifu, Personal Homepage'
+
+# PWA application name configuration
+manifest:
+  # PWA application full name
+  name: Fish Archive
+  
+  # PWA application short name - Used for desktop display
+  short_name: Fish Archive
+  
+  # PWA application description
+  description: A personal homepage in Blue Archive style.
+
+# Website author display name
+author: Yuzifu
+
+# Bottom project display area - Project name translations
+dock:
+  - name: Eat Fish Together
+  - name: BCM Converter
+  - name: Waddle
+  - name: PICKDUCK
+  - name: Boxy
+
+# Left contact methods area - Contact method name translations
+contact:
+  - name: QQ
+  - name: Gitee
+  - name: Github
+  - name: BiliBili
+
+# Task button configuration - Task button display text translation
+task:
+  name: Blog
+
+# Memorial lobby character display name translations
+memorialLobbies:
+  - name: Aris
+  - name: Hina_swimsuit
+
+# Aris character voice dialogue translations
+memorialLobbies[0]:
+  voice:
+      Aris_MemorialLobby_1: I believe magic exists in Kivotos as well.
+      Aris_MemorialLobby_2_1: It must.
+      Aris_MemorialLobby_2_2: How else could you make me so happy, Sensei?
+      Aris_MemorialLobby_3_1: Games are fun,
+      Aris_MemorialLobby_3_2: because they reflect the beauty of the world.
+      Aris_MemorialLobby_3_3: You taught me that.
+      Aris_MemorialLobby_4_1: Games, cats, friends...and even this moment.
+      Aris_MemorialLobby_4_2: The world is full of beautiful things.
+      Aris_MemorialLobby_5_1: And I want to know more of them. Together with you, Sensei.
+      Aris_MemorialLobby_5_2: I want to learn more about this world!
+
+# Hina swimsuit character voice dialogue translations
+memorialLobbies[1]:
+  voice:
+      CH0063_MemorialLobby_1_1: Honestly, I've never understood people's fascination with the ocean.
+      CH0063_MemorialLobby_1_2: While everyone's having a good time, I've never felt the same way.
+      CH0063_MemorialLobby_2_1: It's blurry underwater, and I get nervous when my feet can't touch the ground.
+      CH0063_MemorialLobby_2_2: Sensei, have you ever felt that way before?
+      CH0063_MemorialLobby_3_1: I find it eerie... The way the sea is just a bottomless well at night.
+      CH0063_MemorialLobby_3_2: I hate how it feels like I'll be sucked in just looking at it.
+      CH0063_MemorialLobby_4_1: But, you know, I think I'm beginning to understand. At least a little bit.
+      CH0063_MemorialLobby_4_2: The ocean can be so beautiful.
+      CH0063_MemorialLobby_5_1: It's a new feeling but it's interesting too.
+      CH0063_MemorialLobby_5_2: Thank you, Sensei...for being here with me. And for everything you've taught me.
+
+# Common interface translation strings
+translate:
+  about: About
+  projectWebsite: 'Source Code: '
+  info: Info
+  ifSkip: Skip?
+  update: Sensei! The site has been updated. Refresh to view the newest content!
+  ok: OK
+  cancel: Cancel

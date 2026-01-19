@@ -1,0 +1,204 @@
+<script setup>
+import { ref, computed } from 'vue'
+import { useConfig } from '@/composables/useConfig'
+const { configs } = useConfig()
+
+const currentConfig = computed(() => configs.value)
+
+const taskInfo = computed(() => {
+  if (!currentConfig.value || !currentConfig.value.task) {
+    return { name: '', href: '#' }
+  }
+  return currentConfig.value.task
+})
+
+const curtain = ref(false)
+const bg = ref(false)
+
+const props = defineProps(['l2dOnly'])
+
+const skip = () => {
+  bg.value = true
+  setTimeout(() => {
+    curtain.value = true
+    setTimeout(() => {
+      const href = taskInfo.value.href
+      if (href && href !== '#') {
+        window.open(href)
+      }
+    }, 300)
+    setTimeout(
+      () => {
+        bg.value = false
+        curtain.value = false
+      },
+      Math.floor(Math.random() * 2 + 4) * 250
+    )
+  }, 700)
+}
+</script>
+
+<template>
+  <transition name="down2">
+    <div
+      v-if="!props.l2dOnly"
+      :name="taskInfo.name"
+      class="task css-cursor-hover-enabled"
+      @click="skip"
+    ></div>
+  </transition>
+  <transition name="curtain">
+    <div v-if="bg" class="video-container">
+      <video autoplay muted playsinline>
+        <source src="/transfrom.webm" type="video/webm" />
+        Your browser does not support WebM video.
+      </video>
+    </div>
+  </transition>
+  <transition name="curtain">
+    <div v-if="curtain" class="curtain">
+      <img src="/shitim/Tran_Shitim_Icon.png" alt="" />
+    </div>
+  </transition>
+</template>
+
+<style scoped>
+/* 全屏容器 */
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20000;
+}
+
+/* 视频元素（关键：object-fit: cover + min-width/min-height） */
+.video-container video {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover; /* 关键属性：填充容器并裁剪多余部分 */
+}
+
+.curtain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/shitim/Event_Main_Stage_Bg.png') center;
+  background-size: cover;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.curtain img {
+  width: clamp(500px, 31.25vw, 100vw);
+  height: auto;
+}
+
+.task {
+  position: absolute;
+  bottom: clamp(140px, 8.75vw, 100vw);
+  right: clamp(60px, 3.75vw, 100vw);
+  width: clamp(150px, 9.375vw, 100vw);
+  aspect-ratio: 1 / 1;
+  background: url('/task.png') center;
+  background-size: cover;
+  transition: transform 0.1s;
+  z-index: 2;
+}
+
+.task:before {
+  content: '';
+  position: absolute;
+  left: clamp(10px, 0.625vw, 100vw);
+  bottom: 0;
+  height: clamp(50px, 3.125vw, 100vw);
+  width: calc(100% + clamp(10px, 0.625vw, 100vw));
+  border-radius: clamp(8px, 0.5vw, 100vw);
+  background: #003153;
+  transform: skewX(-10deg);
+}
+
+.task:after {
+  content: attr(name);
+  position: absolute;
+  left: clamp(10px, 0.625vw, 100vw);
+  bottom: 0;
+  height: clamp(50px, 3.125vw, 100vw);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: clamp(26px, 1.625vw, 100vw);
+  font-weight: 800;
+}
+
+.task:active {
+  transform: scale(0.9);
+}
+
+.curtain-leave-to {
+  transform: scaleY(0%);
+}
+
+.curtain-leave-from {
+  transform: scaleY(100%);
+}
+
+.curtain-leave-active {
+  transition:
+    opacity 0.1s ease-in-out,
+    transform 0.25s ease-in-out;
+}
+
+@media screen and (max-width: 495px) {
+  .task {
+    right: 40px;
+  }
+}
+
+@media screen and (max-height: 630px) {
+  .task {
+    width: 120px;
+    height: 120px;
+  }
+  .task:before {
+    width: calc(100% + 4px);
+    background: #003153;
+    transform: skewX(-10deg);
+    height: 40px;
+  }
+
+  .task:after {
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+.down2-leave-to,
+.down2-enter-from {
+  transform: translateY(300px);
+}
+
+.down2-leave-from,
+.down2-enter-to {
+  transform: translateY(0);
+}
+
+.down2-leave-active {
+  transition: transform 0.3s ease-in;
+}
+
+.down2-enter-active {
+  transition: transform 0.3s ease-out;
+}
+</style>

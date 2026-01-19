@@ -1,0 +1,130 @@
+/* 基础布局样式 */
+.app-main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 加载动画样式 */
+.loading-enter-active,
+.loading-leave-active {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.loading-enter-from,
+.loading-leave-to {
+  opacity: 0;
+}
+
+/* 内容区域动画 */
+.up-enter-active,
+.up-leave-active {
+  transition: transform 0.3s ease-out;
+}
+
+.up-enter-from,
+.up-leave-to {
+  transform: translateY(-300px);
+}
+
+.up-enter-to,
+.up-leave-from {
+  transform: translateY(0);
+}
+
+.down-enter-active,
+.down-leave-active {
+  transition: transform 0.3s ease-out;
+}
+
+.down-enter-from,
+.down-leave-to {
+  transform: translateY(300px) skew(-20deg);
+}
+
+.down-enter-to,
+.down-leave-from {
+  transform: translateY(0) skew(-20deg);
+}
+
+.left-enter-active,
+.left-leave-active {
+  transition: transform 0.3s ease-out;
+}
+
+.left-enter-from,
+.left-leave-to {
+  transform: translateX(-400px);
+}
+
+.left-enter-to,
+.left-leave-from {
+  transform: translateX(0);
+}
+
+.right-enter-active,
+.right-leave-active {
+  transition: transform 0.3s ease-out;
+}
+
+.right-enter-from,
+.right-leave-to {
+  transform: translateX(300px);
+}
+
+.right-enter-to,
+.right-leave-from {
+  transform: translateX(0);
+}
+
+/* 背景样式 */
+.app-background {
+  background-image: url('/shitim/Event_Main_Stage_Bg.png');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* 幕布效果 */
+#curtain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  display: none;
+  pointer-events: none;
+}
+
+/* 移动端响应式适配 */
+@media screen and (max-width: 495px) {
+  .down-enter-from,
+  .down-leave-to {
+    transform: translateY(300px);
+  }
+
+  .down-enter-to,
+  .down-leave-from {
+    transform: translateY(0);
+  }
+
+  .up-enter-from,
+  .up-leave-to {
+    transform: translateY(-300px) skew(-10deg);
+  }
+
+  .up-enter-to,
+  .up-leave-from {
+    transform: translateY(0) skew(-10deg);
+  }
+}
