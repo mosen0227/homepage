@@ -51,7 +51,7 @@ manifest:
       sizes: 144x144
 
 # 个人游戏等级信息
-level: 88  # 当前等级
+level: 90  # 当前等级
 exp: 8382   # 当前经验值
 nextExp: 8381  # 升级所需经验值
 
@@ -89,7 +89,7 @@ dock:
 contact:
   # 联系方式1
   - name: QQ Contact
-    href: 'https://wpa.qq.com/msgrd?v=3&uin=2512902451&site=qq&menu=yes&jumpflag=1'
+    href: 'https://wpa.qq.com/msgrd?v=3&uin=2702806620&site=qq&menu=yes&jumpflag=1'
     iconfont: icon-qq
   
   # 联系方式2
@@ -99,12 +99,12 @@ contact:
   
   # 联系方式3
   - name: Github Profile
-    href: 'https://github.com/sf-yuzifu'
+    href: 'https://github.com/mosen0227'
     iconfont: icon-github
   
   # 联系方式4
   - name: BiliBili Channel
-    href: 'https://space.bilibili.com/447666445'
+    href: 'https://space.bilibili.com/1567335755'
     iconfont: icon-bilibili
 
 # 任务按钮配置 - 页面左下角的任务按钮
@@ -112,7 +112,7 @@ task:
   # 任务按钮显示文本
   name: Blog Link
   # 任务按钮链接地址
-  href: 'https://blog.yzf.moe/'
+  href: 'https://mosen0227.github.io/'
 
 # Banner音乐播放器配置
 banner:
