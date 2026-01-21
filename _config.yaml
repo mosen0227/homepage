@@ -112,7 +112,7 @@ task:
   # 任务按钮显示文本
   name: Blog Link
   # 任务按钮链接地址
-  href: 'https://mosen0227.github.io/'
+  href: 'https://blog.mosen.eu.org/'
 
 # Banner音乐播放器配置
 banner:
